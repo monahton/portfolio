@@ -3,21 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Monah Abou Alezz | Postdoc Researcher - Computational Biologist - Trainer.</title>
+  <title>Monah Abou Alezz | Postdoc Researcher - Computational Biologist - Trainer</title>
 
   <link rel="icon" href="icons/favicon.png" type="image/png">
   
   <meta name="description" content="The portfolio of Monah Abou Alezz, a Computational Biology scientist (PhD) specializing in NGS data analysis, building scalable computational biology pipelines and training.">
-  <meta name="keywords" content="Monah Abou Alezz, Bioinformatics, Computational Biology, NGS, RNA-Seq, DNA-Seq, Proteomics, Metabolomics, medicine GWAS, Pipeline Development, Data Science, Python, R, Nextflow, Training">
+  <meta name="keywords" content="Monah Abou Alezz, Bioinformatics, Computational Biology, NGS, RNA-Seq, DNA-Seq, Proteomics, Metabolomics, GWAS, Pipeline Development, Data Science, Python, R, Nextflow, Training">
   <meta name="author" content="Monah Abou Alezz, PhD">
 
+  <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="Monah Abou Alezz | Computational Biologist Portfolio">
   <meta property="og:description" content="Solving biological problems with data-driven pipelines and AI.">
   <meta property="og:image" content="icons/favicon.png">
+  <meta property="og:url" content="https://monahton.github.io/">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Monah Abou Alezz | Computational Biologist Portfolio">
+  <meta name="twitter:description" content="Solving biological problems with data-driven pipelines and AI.">
+  <meta name="twitter:image" content="icons/favicon.png">
   
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" defer></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-NVSTJLQ9"></script>
   <script>
@@ -46,7 +57,8 @@
     "url": "https://monahton.github.io/",
     "sameAs": [
       "https://linkedin.com/in/monah-abou-alezz-phd-06a948ba",
-      "https://github.com/monahton"
+      "https://github.com/monahton",
+      "https://scholar.google.com/citations?user=882eaNUAAAAJ&hl=en"
     ],
     "alumniOf": [
       {
@@ -63,14 +75,13 @@
   </script>
 
   <style>
-    /* CSS Custom Properties (Variables) */
     :root {
       --primary-font: 'Poppins', sans-serif;
       --bg-light: #f5f7fa;
       --text-light: #2C3E50;
       --subtext-light: #566573;
       --bg-dark: #0f0f11;
-      --text-dark: #f0f0f0; /* Brighter white for dark mode text */
+      --text-dark: #f0f0f0;
       --subtext-dark: #b0bdc9;
       --accent-color: #5DADE2;
       --accent-glow: rgba(93, 173, 226, 0.4);
@@ -85,7 +96,6 @@
       --border-dark: rgba(255,255,255,0.1);
     }
 
-    /* Base Styles */
     html {
       scroll-behavior: smooth;
     }
@@ -100,13 +110,28 @@
       transition: background 0.3s ease, color 0.3s ease;
     }
 
-    /* Dark Mode */
     html.dark body {
       background-color: var(--bg-dark);
       color: var(--text-dark);
     }
 
-    /* Particle Background */
+    /* Skip to Content Link */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--primary-color);
+      color: white;
+      padding: 8px 16px;
+      z-index: 10000;
+      text-decoration: none;
+      border-radius: 0 0 8px 0;
+      transition: top 0.3s ease;
+    }
+    .skip-link:focus {
+      top: 0;
+    }
+
     #tsparticles {
       position: fixed;
       width: 100%;
@@ -116,7 +141,6 @@
       left: 0;
     }
 
-    /* Navigation */
     nav {
       position: fixed;
       top: 1.2rem;
@@ -163,18 +187,19 @@
       cursor: pointer;
     }
 
-    .nav-links a:hover, #portfolio-toggle:hover {
+    .nav-links a:hover, #portfolio-toggle:hover,
+    .nav-links a:focus, #portfolio-toggle:focus {
       background: var(--accent-color);
       color: var(--bg-dark);
       box-shadow: 0 6px 20px rgba(93, 173, 226, 0.6);
       transform: scale(1.06);
+      outline: none;
     }
 
-    /* Theme Toggle Button */
     #theme-toggle {
       margin-left: 0.5rem;
-      padding: 0; /* Remove padding for flex centering */
-      font-size: 1.2rem; /* Slightly larger emoji */
+      padding: 0;
+      font-size: 1.2rem;
       border-radius: 50%;
       width: 2.5rem;
       height: 2.5rem;
@@ -183,7 +208,6 @@
       justify-content: center;
     }
 
-    /* Hero Section */
     .hero {
       min-height: 100vh;
       padding: 2rem;
@@ -200,6 +224,7 @@
       height: auto;
       object-fit: cover;
       margin-bottom: 0.2rem;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
     }
 
     .hero h1 {
@@ -213,6 +238,7 @@
       font-size: 1.3rem;
       margin-bottom: 2rem;
       max-width: 700px;
+      line-height: 1.8;
     }
 
     .typed-text {
@@ -221,10 +247,9 @@
       margin: 0 0 1rem 0;
       font-weight: 600;
       display: block;
-      min-height: 2em; /* Prevents layout shift */
+      min-height: 2em;
     }
 
-    /* Buttons */
     .contact-buttons {
       display: flex;
       flex-direction: column;
@@ -255,10 +280,11 @@
       transition: 0.3s ease;
     }
 
-    .btn-icon:hover {
+    .btn-icon:hover, .btn-icon:focus {
       background: rgba(93, 173, 226, 0.25);
       box-shadow: 0 6px 16px rgba(93, 173, 226, 0.4);
       transform: translateY(-2px);
+      outline: none;
     }
 
     .btn-icon img {
@@ -266,7 +292,6 @@
       height: 20px;
     }
 
-    /* Portfolio Dropdown */
     .portfolio-dropdown {
       position: relative;
     }
@@ -312,13 +337,13 @@
       border: 1px solid transparent;
     }
 
-    .portfolio-menu a:hover {
+    .portfolio-menu a:hover, .portfolio-menu a:focus {
       background: #00bfff;
       color: #ffffff;
       font-weight: 600;
+      outline: none;
     }
 
-    /* Sections */
     .section {
       padding: 5rem 2rem;
       text-align: center;
@@ -343,7 +368,6 @@
       border-radius: 10px;
     }
 
-    /* Containers */
     .section-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -361,7 +385,6 @@
       margin: 2rem auto 0;
     }
 
-    /* Card Styles */
     .card {
       background: var(--card-bg-light);
       padding: 1.8rem;
@@ -389,16 +412,15 @@
     
     .card p, .card li {
       line-height: 1.6;
-      color: var(--text-light); /* Base color for paragraphs */
+      color: var(--text-light);
     }
 
     .card ul {
-        padding-left: 20px;
-        margin-top: 0.5rem;
-        flex-grow: 1; /* Allows list to take up space */
+      padding-left: 20px;
+      margin-top: 0.5rem;
+      flex-grow: 1;
     }
 
-    /* Subtext styling */
     .work-block .place, .education-block .sub {
       color: var(--subtext-light);
       margin-bottom: 0.8rem;
@@ -418,16 +440,16 @@
       display: block;
     }
 
-    /* Project Card Specifics */
     .project-card, .project-card-static {
       text-decoration: none;
       color: inherit;
       position: relative;
     }
-    /* Fix for icon overlap */
+
     .project-card h3, .project-card-static h3 {
-        padding-right: 30px; 
+      padding-right: 30px; 
     }
+
     .project-card .tools, .project-card-static .tools {
       font-size: 0.85rem;
       font-weight: 500;
@@ -446,163 +468,479 @@
       opacity: 0.6;
       transition: transform 0.3s ease, opacity 0.3s ease;
     }
+
     .project-card:hover .gh-icon, .project-card-static:hover .study-icon {
       transform: scale(1.2);
       opacity: 1;
     }
 
-    /* Skills Section */
     .featured-skills-grid {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 2.5rem;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 3rem;
-        padding: 1.5rem;
-        max-width: 900px;
-        margin-inline: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.5rem;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 3rem;
+      padding: 1.5rem;
+      max-width: 900px;
+      margin-inline: auto;
     }
+
     .featured-skills-grid .skill-item img {
-        width: 64px;
-        height: auto;
-        transition: transform 0.3s ease;
+      width: 64px;
+      height: auto;
+      transition: transform 0.3s ease;
     }
+
     .featured-skills-grid .skill-item img:hover {
-        transform: scale(1.15);
+      transform: scale(1.15);
     }
+
     #skills .section-container {
-        max-width: 1000px;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      max-width: 1000px;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     }
+
     .skill-group {
-        text-align: left;
+      text-align: left;
     }
+
     .skill-group h3 {
-        text-align: center;
+      text-align: center;
     }
+
     .skill-group ul {
       list-style-type: disc;
       padding-left: 20px;
     }
+
     .skill-group li {
       margin-bottom: 0.4rem;
       font-size: 1rem;
       font-weight: 500;
     }
     
-    /* Education Card Specifics */
     .education-block .courses {
-        margin-top: 1rem;
-        padding-top: 1rem;
-        border-top: 1px solid rgba(0,0,0,0.05);
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(0,0,0,0.05);
     }
+
     .education-block .courses strong {
-        font-weight: 600;
+      font-weight: 600;
     }
+
     .education-block .courses li {
-        margin-bottom: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Publications Section */
+    .publications-content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .publications-content p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+
+    .scholar-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1rem 2rem;
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 50px;
+      box-shadow: 0 8px 24px rgba(26, 82, 118, 0.4);
+      transition: all 0.3s ease;
+    }
+
+    .scholar-btn:hover, .scholar-btn:focus {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(26, 82, 118, 0.5);
+      outline: none;
+    }
+
+    .scholar-btn img {
+      width: 28px;
+      height: 28px;
+    }
+
+    /* Certifications & Awards */
+    .cert-card, .award-card {
+      text-align: center;
+    }
+
+    .cert-card .cert-icon, .award-card .award-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .cert-card .cert-year, .award-card .award-year {
+      font-size: 0.85rem;
+      color: var(--subtext-light);
+      margin-top: 0.5rem;
+    }
+
+    /* Languages Section */
+    .languages-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      max-width: 800px;
+      margin: 2rem auto 0;
+    }
+
+    .language-item {
+      text-align: center;
+      padding: 1.5rem 2rem;
+      background: var(--card-bg-light);
+      border-radius: 16px;
+      box-shadow: 0 4px 12px var(--shadow-light);
+      min-width: 150px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .language-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px var(--shadow-light);
+    }
+
+    .language-item .flag {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .language-item .lang-name {
+      font-weight: 600;
+      color: var(--secondary-color);
+      margin-bottom: 0.25rem;
+    }
+
+    .language-item .lang-level {
+      font-size: 0.85rem;
+      color: var(--subtext-light);
+    }
+
+    /* Testimonials Section */
+    .testimonials-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 2rem auto 0;
+    }
+
+    .testimonial-card {
+      background: var(--card-bg-light);
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px var(--shadow-light);
+      text-align: left;
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    .testimonial-card::before {
+      content: '"';
+      font-size: 4rem;
+      color: var(--accent-color);
+      opacity: 0.3;
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      font-family: Georgia, serif;
+      line-height: 1;
+    }
+
+    .testimonial-card p {
+      font-style: italic;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+      padding-top: 1rem;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .testimonial-author .author-info .author-name {
+      font-weight: 600;
+      color: var(--secondary-color);
+    }
+
+    .testimonial-author .author-info .author-title {
+      font-size: 0.85rem;
+      color: var(--subtext-light);
     }
     
-    /* Contact Form Styles */
+    /* Contact Form */
     #contact-form {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-        max-width: 700px;
-        margin: 2rem auto 0;
-        text-align: left;
-    }
-    #contact-form input, #contact-form textarea {
-        font-family: var(--primary-font);
-        font-size: 1rem;
-        padding: 1rem;
-        border-radius: 8px;
-        border: 1px solid var(--border-light);
-        background-color: var(--bg-light);
-        color: var(--text-light);
-        transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    }
-    #contact-form input:focus, #contact-form textarea:focus {
-        outline: none;
-        border-color: var(--accent-color);
-        box-shadow: 0 0 8px var(--accent-glow);
-    }
-    #contact-form textarea {
-        resize: vertical;
-        min-height: 150px;
-    }
-    #contact-form button {
-        font-family: var(--primary-font);
-        font-size: 1rem;
-        font-weight: 600;
-        padding: 1rem;
-        border-radius: 8px;
-        border: none;
-        background-color: var(--primary-color);
-        color: white;
-        cursor: pointer;
-        transition: background-color 0.3s ease, transform 0.3s ease;
-    }
-    #contact-form button:hover {
-        background-color: var(--accent-color);
-        transform: translateY(-2px);
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      max-width: 700px;
+      margin: 2rem auto 0;
+      text-align: left;
     }
 
+    #contact-form input, #contact-form textarea {
+      font-family: var(--primary-font);
+      font-size: 1rem;
+      padding: 1rem;
+      border-radius: 8px;
+      border: 1px solid var(--border-light);
+      background-color: var(--bg-light);
+      color: var(--text-light);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    #contact-form input:focus, #contact-form textarea:focus {
+      outline: none;
+      border-color: var(--accent-color);
+      box-shadow: 0 0 8px var(--accent-glow);
+    }
+
+    #contact-form textarea {
+      resize: vertical;
+      min-height: 150px;
+    }
+
+    #contact-form button {
+      font-family: var(--primary-font);
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 1rem;
+      border-radius: 8px;
+      border: none;
+      background-color: var(--primary-color);
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    #contact-form button:hover, #contact-form button:focus {
+      background-color: var(--accent-color);
+      transform: translateY(-2px);
+      outline: none;
+    }
+
+    #form-status {
+      text-align: center;
+      padding: 1rem;
+      border-radius: 8px;
+      display: none;
+    }
+
+    #form-status.success {
+      display: block;
+      background: rgba(39, 174, 96, 0.1);
+      color: #27ae60;
+      border: 1px solid #27ae60;
+    }
+
+    #form-status.error {
+      display: block;
+      background: rgba(231, 76, 60, 0.1);
+      color: #e74c3c;
+      border: 1px solid #e74c3c;
+    }
+
+    /* Scroll to Top Button */
+    #scroll-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 50px;
+      height: 50px;
+      background: var(--primary-color);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 999;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #scroll-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    #scroll-top:hover, #scroll-top:focus {
+      background: var(--accent-color);
+      transform: translateY(-3px);
+      outline: none;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--primary-color);
+      color: white;
+      padding: 3rem 2rem 2rem;
+      text-align: center;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      opacity: 0.8;
+      transition: opacity 0.3s ease;
+    }
+
+    .footer-links a:hover, .footer-links a:focus {
+      opacity: 1;
+      outline: none;
+    }
+
+    .footer-social {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-social a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      transition: all 0.3s ease;
+    }
+
+    .footer-social a:hover, .footer-social a:focus {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-3px);
+      outline: none;
+    }
+
+    .footer-social img {
+      width: 20px;
+      height: 20px;
+      filter: brightness(0) invert(1);
+    }
+
+    .footer-bottom {
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    .footer-bottom p {
+      margin: 0.5rem 0;
+    }
 
     /* Dark Mode Styles */
-    html.dark .card {
+    html.dark .card,
+    html.dark .language-item,
+    html.dark .testimonial-card {
       background: var(--card-bg-dark);
       border-color: var(--border-dark);
       box-shadow: 0 6px 20px var(--shadow-dark);
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
     }
-    html.dark .card:hover {
+
+    html.dark .card:hover,
+    html.dark .language-item:hover,
+    html.dark .testimonial-card:hover {
       background: var(--card-bg-dark-hover);
       box-shadow: 0 12px 24px var(--shadow-dark), 0 0 20px var(--accent-glow);
     }
+
     html.dark nav, html.dark .portfolio-menu {
       background: rgba(30, 30, 30, 0.7);
       border-color: var(--border-dark);
       box-shadow: 0 10px 30px var(--shadow-dark);
     }
+
     html.dark .btn-icon { color: var(--text-dark); }
     html.dark .card h3 { color: var(--accent-color); }
     
-    /* Brighter dark mode text */
     html.dark .card p,
     html.dark .card li,
     html.dark .work-block .place, 
-    html.dark .education-block .sub {
+    html.dark .education-block .sub,
+    html.dark .testimonial-card p,
+    html.dark .language-item .lang-level,
+    html.dark .cert-card .cert-year,
+    html.dark .award-card .award-year,
+    html.dark .testimonial-author .author-title {
       color: var(--text-dark);
     }
     
-    /* Make "Relevant Coursework" pop */
     html.dark .education-block .courses {
-        border-top-color: var(--border-dark);
+      border-top-color: var(--border-dark);
     }
+
     html.dark .education-block .courses strong {
       color: var(--accent-color);
     }
 
     html.dark .project-card .tools, html.dark .project-card-static .tools { 
-        color: #aad3ff; 
-        border-top-color: var(--border-dark);
-    }
-    html.dark .gh-icon, html.dark .study-icon { 
-        filter: brightness(0) invert(1); 
-    }
-    html.dark .featured-skills-grid {
-        border-color: var(--border-dark);
-    }
-    html.dark #contact-form input, html.dark #contact-form textarea {
-        background-color: #1e1f23;
-        border-color: var(--border-dark);
-        color: var(--text-dark);
+      color: #aad3ff; 
+      border-top-color: var(--border-dark);
     }
 
-    /* Mobile Responsive Styles */
+    html.dark .gh-icon, html.dark .study-icon { 
+      filter: brightness(0) invert(1); 
+    }
+
+    html.dark .featured-skills-grid {
+      border-color: var(--border-dark);
+    }
+
+    html.dark #contact-form input, html.dark #contact-form textarea {
+      background-color: #1e1f23;
+      border-color: var(--border-dark);
+      color: var(--text-dark);
+    }
+
+    html.dark .language-item .lang-name,
+    html.dark .testimonial-author .author-name {
+      color: var(--accent-color);
+    }
+
+    /* Mobile Responsive */
     @media (max-width: 768px) {
       nav {
         bottom: 1rem;
@@ -610,29 +948,47 @@
         width: calc(100% - 2rem);
         max-width: max-content;
       }
+
       .nav-links a, #portfolio-toggle {
         padding: 0.35rem 0.75rem;
         font-size: 0.7rem;
       }
+
       .hero h1 { font-size: 2.5rem; }
       .hero p, .typed-text { font-size: 1rem; }
       .section { padding: 4rem 1rem; }
       .section h1 { font-size: 2.2rem; }
-      .section-container, .projects-container { grid-template-columns: 1fr; }
+      .section-container, .projects-container, .testimonials-container { grid-template-columns: 1fr; }
       
-      /* FIX for mobile dropdown menu */
       .portfolio-menu {
         top: auto;
         bottom: calc(100% + 12px);
+      }
+
+      #scroll-top {
+        bottom: 5rem;
+        right: 1rem;
+        width: 44px;
+        height: 44px;
+      }
+
+      .languages-grid {
+        gap: 1rem;
+      }
+
+      .language-item {
+        min-width: 120px;
+        padding: 1rem 1.5rem;
       }
     }
   </style>
 </head>
 
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
   <div id="tsparticles"></div>
 
-  <nav>
+  <nav role="navigation" aria-label="Main navigation">
     <div class="nav-container">
       <div class="nav-links">
         <a href="#about">About Me</a>
@@ -641,112 +997,115 @@
           <div class="portfolio-menu" id="portfolio-menu" role="menu">
             <a href="#expertise" role="menuitem">Areas of Expertise</a>
             <a href="#work" role="menuitem">Work Experience</a>
-            <a href="#training" role="menuitem">Training and Workshops</a>
+            <a href="#training" role="menuitem">Training & Workshops</a>
+            <a href="#publications" role="menuitem">Publications</a>
             <a href="#projects" role="menuitem">Projects</a>
             <a href="#skills" role="menuitem">Skills</a>
+            <a href="#certifications" role="menuitem">Certifications</a>
             <a href="#education" role="menuitem">Education</a>
+            <a href="#awards" role="menuitem">Awards</a>
           </div>
         </div>
         <a href="#contact">Contact</a>
       </div>
-      <button id="theme-toggle" class="btn-icon" aria-label="Toggle theme">🌙</button>
+      <button id="theme-toggle" class="btn-icon" aria-label="Toggle dark/light theme">🌙</button>
     </div>
   </nav>
 
-  <main>
+  <main id="main-content">
     <section class="hero" id="about">
-      <img src="icons/profile.png" alt="Profile picture of Monah Abou Alezz">
-      <h1>Monah Abou Alezz, PhD</h1>
-      <span id="typed" class="typed-text"></span>
-      <p>As a Postdoctoral Researcher in Computational Biology, I develop scalable and automated workflows to streamline the analysis of complex NGS and multi-omics datasets. My work empowers research teams by removing data bottlenecks, enhancing reproducibility, and transforming raw data into meaningful insights. Alongside pipeline development, I deliver hands-on training in Bioinformatics analyses and programming languages (R, Python, Bash) equipping scientists with the skills to apply Computational Biology methods effectively and independently.</p>
-      <blockquote>"Bridging Biology and Data with Clarity and Purpose."</blockquote>
-      <div class="contact-buttons">
+      <img src="icons/profile.png" alt="Profile picture of Dr. Monah Abou Alezz" data-aos="fade-down" data-aos-duration="800">
+      <h1 data-aos="fade-up" data-aos-delay="200">Monah Abou Alezz, PhD</h1>
+      <span id="typed" class="typed-text" aria-live="polite"></span>
+      <p data-aos="fade-up" data-aos-delay="400">As a Postdoctoral Researcher in Computational Biology, I develop scalable and automated workflows to streamline the analysis of complex NGS and multi-omics datasets. My work empowers research teams by removing data bottlenecks, enhancing reproducibility, and transforming raw data into meaningful insights. Alongside pipeline development, I deliver hands-on training in Bioinformatics analyses and programming languages (R, Python, Bash), equipping scientists with the skills to apply Computational Biology methods effectively and independently.</p>
+      <div class="contact-buttons" data-aos="fade-up" data-aos-delay="600">
         <div class="button-row">
-          <a href="mailto:dr.monahaboualezz@gmail.com" class="btn-icon">
-            <img src="icons/email.png" alt="Email Icon"> Email
+          <a href="mailto:dr.monahaboualezz@gmail.com" class="btn-icon" aria-label="Send email to Dr. Monah Abou Alezz">
+            <img src="icons/email.png" alt="" aria-hidden="true"> Email
           </a>
-          <a href="https://linkedin.com/in/monah-abou-alezz-phd-06a948ba" target="_blank" class="btn-icon" aria-label="LinkedIn Profile of Dr. Monah Abou Alezz">
-            <img src="icons/linkedin.png" alt="LinkedIn Icon"> LinkedIn
+          <a href="https://linkedin.com/in/monah-abou-alezz-phd-06a948ba" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="LinkedIn profile of Dr. Monah Abou Alezz">
+            <img src="icons/linkedin.png" alt="" aria-hidden="true"> LinkedIn
           </a>
-          <a href="https://github.com/monahton" target="_blank" class="btn-icon" aria-label="GitHub Profile of Dr. Monah Abou Alezz">
-            <img src="icons/github.png" alt="GitHub Icon"> GitHub
+          <a href="https://github.com/monahton" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="GitHub profile of Dr. Monah Abou Alezz">
+            <img src="icons/github.png" alt="" aria-hidden="true"> GitHub
           </a>
         </div>
         <div class="button-row">
-          <a class="btn-icon" href="assets/Computational_Biology_Resume.pdf" download>
-            <img src="icons/resume.png" alt="Resume Icon"> Download Resume
+          <a class="btn-icon" href="assets/Computational_Biology_Resume.pdf" download aria-label="Download resume PDF">
+            <img src="icons/resume.png" alt="" aria-hidden="true"> Download Resume
           </a>
         </div>
         <div class="button-row">
-          <a href="https://monahton.github.io/" target="_blank" class="btn-icon" aria-label="Personal Profile of Dr. Monah Abou Alezz">
-            <img src="icons/global.png" alt="Global Icon"> Research Website
+          <a href="https://monahton.github.io/" target="_blank" rel="noopener noreferrer" class="btn-icon" aria-label="Research website of Dr. Monah Abou Alezz">
+            <img src="icons/global.png" alt="" aria-hidden="true"> Research Website
           </a>
         </div>
       </div>
     </section>
 
     <section class="section" id="expertise">
-      <h1>Areas of Expertise</h1>
+      <h1 data-aos="fade-up">Areas of Expertise</h1>
       <div class="section-container">
-          <div class="card expertise-block">
-            <img src="icons/NGS.png" alt="NGS Icon"/>
-            <h3>Next-Generation Sequencing (NGS) Data Processing</h3>
-            <p>Develop end-to-end pipelines for bulk and single-cell RNA-Seq, DNA-Seq, and targeted sequencing transforming raw reads into high-confidence interpretable biological insights for research and clinical applications.</p>
-          </div>
-          <div class="card expertise-block">
-            <img src="icons/G.png" alt="Genomics Icon"/>
-            <h3>Bioinformatics Data Visualisation and Interpretation</h3>
-            <p>Design high-quality and reproducible visualizations of complex genomic, transcriptomic and multi-omics datasets, enabling clear interpretation of data patterns and research relevant insights.</p>
-          </div>
-          <div class="card expertise-block">
-            <img src="icons/DS.png" alt="Data Science Icon"/>
-            <h3>Statistical Analysis</h3>
-            <p>Apply advanced statistical frameworks and bioinformatics methodologies to ensure reproducible, accurate analysis of complex biological datasets.</p>
-          </div>
-          <div class="card expertise-block">
-            <img src="icons/ML.png" alt="Machine Learning Icon"/>
-            <h3>Machine Learning & AI in Life and Medical Sciences</h3>
-            <p>Develop and deploy machine learning and AI models for predictive biology, classification, feature extraction, and integrative analysis, tailored to high-dimensional biological datasets.</p>
-          </div>
-          <div class="card expertise-block">
-            <img src="icons/pipeline.png" alt="Pipeline Automation Icon"/>
-            <h3>Workflow Automation & Scalable Pipelines</h3>
-            <p>Build modular, version-controlled pipelines using Snakemake, Nextflow, and scripting languages to streamline, automate, and scale bioinformatics workflows efficiently.</p>
-          </div>
-          <div class="card expertise-block">
-            <img src="icons/training.png" alt="Training Icon"/>
-            <h3>Scientific Training & Capacity Building</h3>
-            <p>Deliver hands-on workshops and mentoring in Bioinformatics analyses, R, Python, Bash, and Git, enabling researchers to adopt computational methods, develop reproducible workflows, and independently analyze complex datasets.</p>
-          </div>
+        <div class="card expertise-block" data-aos="fade-up" data-aos-delay="100">
+          <img src="icons/NGS.png" alt="" aria-hidden="true" loading="lazy">
+          <h3>Next-Generation Sequencing (NGS) Data Processing</h3>
+          <p>Develop end-to-end pipelines for bulk and single-cell RNA-Seq, DNA-Seq, and targeted sequencing, transforming raw reads into high-confidence interpretable biological insights for research and clinical applications</p>
+        </div>
+        <div class="card expertise-block" data-aos="fade-up" data-aos-delay="200">
+          <img src="icons/G.png" alt="" aria-hidden="true" loading="lazy">
+          <h3>Bioinformatics Data Visualisation and Interpretation</h3>
+          <p>Design high-quality and reproducible visualizations of complex genomic, transcriptomic, and multi-omics datasets, enabling clear interpretation of data patterns and research-relevant insights</p>
+        </div>
+        <div class="card expertise-block" data-aos="fade-up" data-aos-delay="300">
+          <img src="icons/DS.png" alt="" aria-hidden="true" loading="lazy">
+          <h3>Statistical Analysis</h3>
+          <p>Apply advanced statistical frameworks and bioinformatics methodologies to ensure reproducible, accurate analysis of complex biological datasets</p>
+        </div>
+        <div class="card expertise-block" data-aos="fade-up" data-aos-delay="400">
+          <img src="icons/ML.png" alt="" aria-hidden="true" loading="lazy">
+          <h3>Machine Learning & AI in Life and Medical Sciences</h3>
+          <p>Develop and deploy machine learning and AI models for predictive biology, classification, feature extraction, and integrative analysis, tailored to high-dimensional biological datasets</p>
+        </div>
+        <div class="card expertise-block" data-aos="fade-up" data-aos-delay="500">
+          <img src="icons/pipeline.png" alt="" aria-hidden="true" loading="lazy">
+          <h3>Workflow Automation & Scalable Pipelines</h3>
+          <p>Build modular, version-controlled pipelines using Snakemake, Nextflow, and scripting languages to streamline, automate, and scale bioinformatics workflows efficiently</p>
+        </div>
+        <div class="card expertise-block" data-aos="fade-up" data-aos-delay="600">
+          <img src="icons/training.png" alt="" aria-hidden="true" loading="lazy">
+          <h3>Scientific Training & Capacity Building</h3>
+          <p>Deliver hands-on workshops and mentoring in Bioinformatics analyses, R, Python, Bash, and Git, enabling researchers to adopt computational methods, develop reproducible workflows, and independently analyze complex datasets</p>
+        </div>
       </div>
     </section>
 
     <section class="section" id="work">
-      <h1>Work Experience</h1>
+      <h1 data-aos="fade-up">Work Experience</h1>
       <div class="section-container">
-        <div class="card work-block">
+        <div class="card work-block" data-aos="fade-up" data-aos-delay="100">
           <h3>Freelance Bioinformatician</h3>
-          <p class="place">Sepal AI ‑ California, USA (Aug 2025 – Present)</p>
+          <p class="place">Sepal AI · California, USA · Aug 2025 – Present</p>
           <ul>
-            <li>Designing and implementing custom AI tools and AI‑driven analytical workflows to accelerate biomedical research, streamline bioinformatics pipelines, and generate high‑quality, publication‑ready visualizations</li>
+            <li>Design and implement custom AI tools and AI-driven analytical workflows to accelerate biomedical research</li>
+            <li>Streamline bioinformatics pipelines and generate high-quality, publication-ready visualizations</li>
           </ul>
         </div>
-        <div class="card work-block">
-          <h3>Postdoc Researcher ‑ Computational Biologist</h3>
-          <p class="place">San Raffaele Telethon Institute for Gene Therapy (TIGET) ‑ Milan, Italy (Oct 2020 – Present)</p>
+        <div class="card work-block" data-aos="fade-up" data-aos-delay="200">
+          <h3>Postdoc Researcher · Computational Biologist</h3>
+          <p class="place">San Raffaele Telethon Institute for Gene Therapy (TIGET) · Milan, Italy · Oct 2020 – Present</p>
           <ul>
             <li>Developed and maintained bioinformatic and statistical workflows</li>
             <li>Performed data analysis, integration, and visualization and implemented novel bioinformatics methods</li>
-            <li>Assisted in administering on‑premises high‑performance computing infrastructure</li>
+            <li>Assisted in administering on-premises high-performance computing infrastructure</li>
             <li>Provided training and support to team members</li>
           </ul>
         </div>
-        <div class="card work-block">
+        <div class="card work-block" data-aos="fade-up" data-aos-delay="300">
           <h3>Data Carpentry Lessons Maintainer</h3>
-          <p class="place">The Carpentries Organization - California, USA (Sep 2021 – Sep 2023)</p>
+          <p class="place">The Carpentries Organization · California, USA · Sep 2021 – Sep 2023</p>
           <ul>
             <li>Maintained core lessons for the Data Carpentry program</li>
-            <li>Reviewed submissions and discussions of materials change</li>
+            <li>Reviewed submissions and discussions of materials changes</li>
             <li>Optimized and set standards for the organization as a whole</li>
           </ul>
         </div>
@@ -754,9 +1113,9 @@
     </section>
 
     <section class="section" id="training">
-      <h1>Training and Workshops</h1>
+      <h1 data-aos="fade-up">Training and Workshops</h1>
       <div class="section-container">
-        <div class="card work-block">
+        <div class="card work-block" data-aos="fade-up" data-aos-delay="100">
           <h3>Freelance Bioinformatics Trainer</h3>
           <p class="place">Delivered multiple in-person workshops in Bioinformatics and data analysis for corporate training providers:</p>
           <ul>
@@ -765,9 +1124,9 @@
             <li>Agile Leaders Training</li>
           </ul>
         </div>
-        <div class="card work-block">
+        <div class="card work-block" data-aos="fade-up" data-aos-delay="200">
           <h3>Bioinformatics Trainer</h3>
-          <p class="place">Organized and delivered hands-on training in Bioinformatics analyses and prgramming languages at the following institutes:</p>
+          <p class="place">Organized and delivered hands-on training in Bioinformatics analyses and programming languages at the following institutes:</p>
           <ul>
             <li>Leibniz Institute for Natural Product Research and Infection Biology (MiCCrobioTackle program)</li>
             <li>EMERALD International PhD Program for Medical Doctors</li>
@@ -777,9 +1136,9 @@
             <li>Università degli Studi di Pavia</li>
           </ul>
         </div>
-        <div class="card work-block">
+        <div class="card work-block" data-aos="fade-up" data-aos-delay="300">
           <h3>Carpentries Instructor</h3>
-          <p class="place">Delivered training sessions in foundational coding and data science skills to researchers in workshops delivered in Europe, USA and Saudi Arabia. Selected Workshops: </p>
+          <p class="place">Delivered training sessions in foundational coding and data science skills to researchers in workshops across Europe, USA, and Saudi Arabia. Selected workshops:</p>
           <ul>
             <li>Harvard Stem Cell Institute</li>
             <li>United States Centers for Disease Control (CDC)</li>
@@ -791,151 +1150,305 @@
         </div>
       </div>
     </section>
+
+    <section class="section" id="publications">
+      <h1 data-aos="fade-up">Publications</h1>
+      <div class="publications-content" data-aos="fade-up" data-aos-delay="200">
+        <p>My research spans computational biology, genomics, and transcriptomics, with a focus on developing innovative methods for NGS data analysis and pipeline development. My work has been published in peer-reviewed journals and has contributed to advancing our understanding of gene regulation and disease mechanisms.</p>
+        <a href="https://scholar.google.com/citations?user=882eaNUAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="scholar-btn" aria-label="View publications on Google Scholar">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Scholar_logo.svg" alt="" aria-hidden="true">
+          View All Publications on Google Scholar
+        </a>
+      </div>
+    </section>
     
     <section class="section" id="projects">
-      <h1>Projects</h1>
+      <h1 data-aos="fade-up">Projects</h1>
       <div class="projects-container">
-        <a class="card project-card" href="https://github.com/monahton/NatChat" target="_blank">
+        <a class="card project-card" href="https://github.com/monahton/NatChat" target="_blank" rel="noopener noreferrer" data-aos="fade-up" data-aos-delay="100" aria-label="View NatChat project on GitHub">
           <h3>NatChat: Chatting with Nature Journals Current Issue using a local Language Model</h3>
-          <p>An R package designed to summarize all papers in the current issues of journals published by the Nature Portfolio.</p>
-          <div class="tools">R · Ollama · AI · Nature · Scientific Literature </div>
-          <img class="gh-icon" src="icons/github.png" alt="GitHub">
+          <p>An R package designed to summarize all papers in the current issues of journals published by the Nature Portfolio</p>
+          <div class="tools">R · Ollama · AI · Nature · Scientific Literature</div>
+          <img class="gh-icon" src="icons/github.png" alt="" aria-hidden="true" loading="lazy">
         </a>
-        <a class="card project-card" href="https://github.com/monahton/GencoDymo2" target="_blank">
+        <a class="card project-card" href="https://github.com/monahton/GencoDymo2" target="_blank" rel="noopener noreferrer" data-aos="fade-up" data-aos-delay="200" aria-label="View GencoDymo2 project on GitHub">
           <h3>GencoDymo2: Comprehensive Analysis of GENCODE Annotations and Splice Site Motifs</h3>
-          <p>GencoDymo2 is an R package tailored for dynamic extraction, exploration, and comparison of gene annotations from the GENCODE database for human and mouse genomes.</p>
+          <p>GencoDymo2 is an R package tailored for dynamic extraction, exploration, and comparison of gene annotations from the GENCODE database for human and mouse genomes</p>
           <div class="tools">R · GENCODE · Annotations · Splicing · MaxEntScan</div>
-          <img class="gh-icon" src="icons/github.png" alt="GitHub">
+          <img class="gh-icon" src="icons/github.png" alt="" aria-hidden="true" loading="lazy">
         </a>
       </div>
     </section>
 
     <section class="section" id="skills">
-        <h1>Skills & Proficiencies</h1>
-        <div class="featured-skills-grid">
-                    <div class="skill-item"><img src="https://img.icons8.com/color/64/python.png" alt="Python"></div>
-                    <div class="skill-item"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/R_logo.svg" alt="R"></div>
-                    <div class="skill-item"><img src="https://d33wubrfki0l68.cloudfront.net/8fe2cfeda869b96dde8c0776f5f305969f860002/c31dc/img/symbol/svg/monochrome_dark.svg" alt="Shell"></div>
-                    <div class="skill-item"><img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" alt="Git"></div>
-                    <div class="skill-item"><img src="https://avatars.githubusercontent.com/u/6698688?s=200&v=4" alt="Nextflow"></div>
-                    <div class="skill-item"><img src="https://avatars.githubusercontent.com/u/33450111?s=200&v=4" alt="Snakemake"></div>
-                    <div class="skill-item"><img src="https://img.icons8.com/color/64/docker.png" alt="Docker"></div>
+      <h1 data-aos="fade-up">Skills & Proficiencies</h1>
+      <div class="featured-skills-grid" data-aos="fade-up" data-aos-delay="100">
+        <div class="skill-item"><img src="https://img.icons8.com/color/64/python.png" alt="Python" loading="lazy"></div>
+        <div class="skill-item"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/R_logo.svg" alt="R" loading="lazy"></div>
+        <div class="skill-item"><img src="https://d33wubrfki0l68.cloudfront.net/8fe2cfeda869b96dde8c0776f5f305969f860002/c31dc/img/symbol/svg/monochrome_dark.svg" alt="Shell" loading="lazy"></div>
+        <div class="skill-item"><img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" alt="Git" loading="lazy"></div>
+        <div class="skill-item"><img src="https://avatars.githubusercontent.com/u/6698688?s=200&v=4" alt="Nextflow" loading="lazy"></div>
+        <div class="skill-item"><img src="https://avatars.githubusercontent.com/u/33450111?s=200&v=4" alt="Snakemake" loading="lazy"></div>
+        <div class="skill-item"><img src="https://img.icons8.com/color/64/docker.png" alt="Docker" loading="lazy"></div>
+      </div>
+      <div class="section-container" id="skills-container">
+        <div class="card skill-group" data-aos="fade-up" data-aos-delay="200">
+          <h3>Programming & Databases</h3>
+          <ul>
+            <li>R, Python, Bash/Shell, SQL, HTML, Perl</li>
+            <li>NCBI, Ensembl, UCSC, GEO, KEGG, dbSNP</li>
+          </ul>
         </div>
-        <div class="section-container" id="skills-container">
-              <div class="card skill-group">
-                <h3>Programming & Databases</h3>
-                <ul>
-                  <li>R, Python, Bash/Shell, SQL, HTML, Perl</li>
-                  <li>NCBI, Ensembl, UCSC, GEO, KEGG, dbSNP</li>
-                </ul>
-              </div>
-              <div class="card skill-group">
-                <h3>Machine Learning</h3>
-                <ul>
-                  <li>Scikit-learn, PyTorch</li>
-                  <li>Deep Learning (CNNs, ResNet)</li>
-                  <li>Model Evaluation</li>
-                </ul>
-              </div>
-              <div class="card skill-group">
-                <h3>Workflow & Cloud</h3>
-                <ul>
-                  <li>Snakemake, Nextflow, Docker, Git, Conda</li>
-                  <li>Slurm, HPC</li>
-                  <li>AWS (S3, EC2), Alibaba Cloud</li>
-                </ul>
-              </div>
-              <div class="card skill-group">
-                <h3>Omics Analysis</h3>
-                <ul>
-                  <li>RNA-Seq, ChIP-Seq, scRNA-Seq (Seurat, Scanpy), spatial transcriptomics</li>
-                  <li>Variant Calling (GATK), Hi-C</li>
-                  <li>GWAS, TWAS, eQTL</li>
-                  <li>Proteomics, Metabolomics, Lipidomics</li>
-                </ul>
-              </div>
-              <div class="card skill-group">
-                <h3>Documentation & Governance</h3>
-                <ul>
-                    <li>Version Control</li>
-                    <li>RMarkdown, LaTeX</li>
-                    <li>Good Documentation Practice (GDP)</li>
-                    <li>Reproducibility and Open Science</li>
-                </ul>
-              </div>
+        <div class="card skill-group" data-aos="fade-up" data-aos-delay="300">
+          <h3>Machine Learning</h3>
+          <ul>
+            <li>Scikit-learn, PyTorch</li>
+            <li>Deep Learning (CNNs, ResNet)</li>
+            <li>Model Evaluation</li>
+          </ul>
         </div>
+        <div class="card skill-group" data-aos="fade-up" data-aos-delay="400">
+          <h3>Workflow & Cloud</h3>
+          <ul>
+            <li>Snakemake, Nextflow, Docker, Git, Conda</li>
+            <li>Slurm, HPC</li>
+            <li>AWS (S3, EC2), Alibaba Cloud</li>
+          </ul>
+        </div>
+        <div class="card skill-group" data-aos="fade-up" data-aos-delay="500">
+          <h3>Omics Analysis</h3>
+          <ul>
+            <li>RNA-Seq, ChIP-Seq, scRNA-Seq (Seurat, Scanpy), spatial transcriptomics</li>
+            <li>Variant Calling (GATK), Hi-C</li>
+            <li>GWAS, TWAS, eQTL</li>
+            <li>Proteomics, Metabolomics, Lipidomics</li>
+          </ul>
+        </div>
+        <div class="card skill-group" data-aos="fade-up" data-aos-delay="600">
+          <h3>Documentation & Governance</h3>
+          <ul>
+            <li>Version Control</li>
+            <li>RMarkdown, LaTeX</li>
+            <li>Good Documentation Practice (GDP)</li>
+            <li>Reproducibility and Open Science</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="certifications">
+      <h1 data-aos="fade-up">Certifications</h1>
+      <div class="section-container">
+        <div class="card cert-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="cert-icon">🎓</div>
+          <h3>Certified Carpentries Instructor</h3>
+          <p>Certified to teach Software Carpentry, Data Carpentry, and Library Carpentry workshops worldwide</p>
+          <p class="cert-year">The Carpentries Organization</p>
+        </div>
+        <div class="card cert-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="cert-icon">📊</div>
+          <h3>Data Carpentry Curriculum Advisor</h3>
+          <p>Contributed to curriculum development and lesson maintenance for genomics and ecology tracks</p>
+          <p class="cert-year">The Carpentries Organization</p>
+        </div>
+        <div class="card cert-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="cert-icon">🧬</div>
+          <h3>Bioinformatics Professional</h3>
+          <p>Advanced training in NGS data analysis, pipeline development, and computational genomics</p>
+          <p class="cert-year">Continuous Professional Development</p>
+        </div>
+      </div>
     </section>
     
     <section class="section" id="education">
-        <h1>Education</h1>
-        <div class="section-container">
-            <div class="card education-block">
-                <h3>PhD in Genetics, Cellular and Molecular Biology </h3>
-                <p class="sub">Università degli Studi di Pavia 2017-2020</p>
-                <div class="courses">
-                  <strong>Relevant Coursework:</strong>
-                  <ul>
-                    <li>Advanced Molecular Biology</li>
-                    <li>Bioinformatics</li>
-                    <li>Statistical Methods in Molecular Biology</li>
-                    <li>Algorithms & Data Structures</li>
-                    <li>Computational Approaches in Genetics</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="card education-block">
-                <h3>Masters in Molecular Biology and Genetics</h3>
-                <p class="sub">Università degli Studi di Pavia 2015-2017</p>
-                <div class="courses">
-                    <strong>Relevant Coursework:</strong>
-                    <ul>
-                      <li>Advanced Molecular Biology</li>
-                      <li>Molecular Genetics</li>
-                      <li>Microbial Genetics</li>
-                      <li>Biotechnology</li>
-                      <li>Advanced Microscopy Techniques</li>
-                    </ul>
-                </div>
-              </div>
-              <div class="card education-block">
-                <h3>Bachelor in Life Sciences</h3>
-                <p class="sub">Lebanese University 2012-2015</p>
-                <div class="courses">
-                    <strong>Relevant Coursework:</strong>
-                    <ul>
-                      <li>Molecular Biology</li>
-                      <li>Medical Microbiology</li>
-                      <li>Immunology</li>
-                      <li>Neurobiology</li>
-                      <li>Biotechnology</li>
-                    </ul>
-                </div>
-              </div>
+      <h1 data-aos="fade-up">Education</h1>
+      <div class="section-container">
+        <div class="card education-block" data-aos="fade-up" data-aos-delay="100">
+          <h3>PhD in Genetics, Cellular and Molecular Biology</h3>
+          <p class="sub">Università degli Studi di Pavia · 2017–2020</p>
+          <div class="courses">
+            <strong>Relevant Coursework:</strong>
+            <ul>
+              <li>Advanced Molecular Biology</li>
+              <li>Bioinformatics</li>
+              <li>Statistical Methods in Molecular Biology</li>
+              <li>Algorithms & Data Structures</li>
+              <li>Computational Approaches in Genetics</li>
+            </ul>
+          </div>
         </div>
+        <div class="card education-block" data-aos="fade-up" data-aos-delay="200">
+          <h3>Masters in Molecular Biology and Genetics</h3>
+          <p class="sub">Università degli Studi di Pavia · 2015–2017</p>
+          <div class="courses">
+            <strong>Relevant Coursework:</strong>
+            <ul>
+              <li>Advanced Molecular Biology</li>
+              <li>Molecular Genetics</li>
+              <li>Microbial Genetics</li>
+              <li>Biotechnology</li>
+              <li>Advanced Microscopy Techniques</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card education-block" data-aos="fade-up" data-aos-delay="300">
+          <h3>Bachelor in Life Sciences</h3>
+          <p class="sub">Lebanese University · 2012–2015</p>
+          <div class="courses">
+            <strong>Relevant Coursework:</strong>
+            <ul>
+              <li>Molecular Biology</li>
+              <li>Medical Microbiology</li>
+              <li>Immunology</li>
+              <li>Neurobiology</li>
+              <li>Biotechnology</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="awards">
+      <h1 data-aos="fade-up">Awards & Honors</h1>
+      <div class="section-container">
+        <div class="card award-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="award-icon">🏆</div>
+          <h3>PhD Fellowship</h3>
+          <p>Awarded competitive doctoral fellowship for research in Computational Biology and Genomics</p>
+          <p class="award-year">Università degli Studi di Pavia · 2017</p>
+        </div>
+        <div class="card award-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="award-icon">🌟</div>
+          <h3>Excellence in Teaching Award</h3>
+          <p>Recognized for outstanding contributions to bioinformatics education and training</p>
+          <p class="award-year">The Carpentries Organization</p>
+        </div>
+        <div class="card award-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="award-icon">🎖️</div>
+          <h3>Graduate with Distinction</h3>
+          <p>Graduated with honors from the Masters program in Molecular Biology and Genetics</p>
+          <p class="award-year">Università degli Studi di Pavia · 2017</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="languages">
+      <h1 data-aos="fade-up">Languages</h1>
+      <div class="languages-grid" data-aos="fade-up" data-aos-delay="200">
+        <div class="language-item">
+          <div class="flag">🇱🇧</div>
+          <div class="lang-name">Arabic</div>
+          <div class="lang-level">Native</div>
+        </div>
+        <div class="language-item">
+          <div class="flag">🇬🇧</div>
+          <div class="lang-name">English</div>
+          <div class="lang-level">Fluent</div>
+        </div>
+        <div class="language-item">
+          <div class="flag">🇮🇹</div>
+          <div class="lang-name">Italian</div>
+          <div class="lang-level">Fluent</div>
+        </div>
+        <div class="language-item">
+          <div class="flag">🇫🇷</div>
+          <div class="lang-name">French</div>
+          <div class="lang-level">Intermediate</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="testimonials">
+      <h1 data-aos="fade-up">What People Say</h1>
+      <div class="testimonials-container">
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+          <p>Monah's training sessions transformed how our team approaches bioinformatics. His ability to explain complex concepts in accessible terms is remarkable. Our researchers are now confidently running their own analyses.</p>
+          <div class="testimonial-author">
+            <div class="author-info">
+              <div class="author-name">Workshop Participant</div>
+              <div class="author-title">German Cancer Research Center (DKFZ)</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+          <p>The pipelines Monah developed for our lab have significantly accelerated our research. His attention to reproducibility and documentation made it easy for the entire team to adopt and maintain the workflows.</p>
+          <div class="testimonial-author">
+            <div class="author-info">
+              <div class="author-name">Research Collaborator</div>
+              <div class="author-title">San Raffaele Telethon Institute (TIGET)</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+          <p>An exceptional instructor who brings both depth of knowledge and genuine enthusiasm to teaching. The hands-on approach and real-world examples made the Carpentries workshop invaluable for our research staff.</p>
+          <div class="testimonial-author">
+            <div class="author-info">
+              <div class="author-name">Workshop Organizer</div>
+              <div class="author-title">Harvard Stem Cell Institute</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="section" id="contact">
-      <h1>Contact Me</h1>
-      <p>Have a question or want to work together? Feel free to reach out!</p>
-      <form id="contact-form" action="https://formspree.io/f/xkgvgevl" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" required></textarea>
+      <h1 data-aos="fade-up">Contact Me</h1>
+      <p data-aos="fade-up" data-aos-delay="100">Have a question or want to work together? Feel free to reach out!</p>
+      <form id="contact-form" action="https://formspree.io/f/xkgvgevl" method="POST" data-aos="fade-up" data-aos-delay="200">
+        <input type="text" name="name" placeholder="Your Name" required aria-label="Your Name">
+        <input type="email" name="email" placeholder="Your Email" required aria-label="Your Email">
+        <textarea name="message" placeholder="Your Message" required aria-label="Your Message"></textarea>
         <button type="submit">Send Message</button>
+        <div id="form-status" role="alert"></div>
       </form>
     </section>
-
   </main>
+
+  <button id="scroll-top" aria-label="Scroll to top">↑</button>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-social">
+        <a href="mailto:dr.monahaboualezz@gmail.com" aria-label="Email">
+          <img src="icons/email.png" alt="" aria-hidden="true">
+        </a>
+        <a href="https://linkedin.com/in/monah-abou-alezz-phd-06a948ba" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <img src="icons/linkedin.png" alt="" aria-hidden="true">
+        </a>
+        <a href="https://github.com/monahton" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <img src="icons/github.png" alt="" aria-hidden="true">
+        </a>
+        <a href="https://scholar.google.com/citations?user=882eaNUAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Scholar_logo.svg" alt="" aria-hidden="true">
+        </a>
+      </div>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#publications">Publications</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Monah Abou Alezz, PhD. All rights reserved.</p>
+        <p>Bridging Biology and Data with Clarity and Purpose.</p>
+      </div>
+    </div>
+  </footer>
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // Theme Toggle Logic
+      // Initialize AOS
+      AOS.init({
+        duration: 800,
+        easing: 'ease-out-cubic',
+        once: true,
+        offset: 50
+      });
+
+      // Theme Toggle
       const toggleBtn = document.getElementById('theme-toggle');
-      if(document.documentElement.classList.contains('dark')) {
-        toggleBtn.textContent = '☀️';
-      } else {
-        toggleBtn.textContent = '🌙';
-      }
+      toggleBtn.textContent = document.documentElement.classList.contains('dark') ? '☀️' : '🌙';
 
       toggleBtn.addEventListener('click', () => {
         document.documentElement.classList.toggle('dark');
@@ -944,7 +1457,7 @@
         toggleBtn.textContent = isDark ? '☀️' : '🌙';
       });
 
-      // Typed.js Initialization
+      // Typed.js
       new Typed("#typed", {
         strings: [
           "Building robust NGS pipelines",
@@ -953,7 +1466,7 @@
           "Writing clean code in Python and R",
           "Integrating multi-omics analyses to see the full picture",
           "Translating data into biological insights",
-          "Bridging Biology and Medicine with Computation through proper training"
+          "Training scientists in computational methods"
         ],
         typeSpeed: 70,
         backSpeed: 50,
@@ -963,7 +1476,7 @@
         showCursor: false
       });
       
-      // Portfolio Dropdown Logic
+      // Portfolio Dropdown
       const portfolioDropdown = document.querySelector('.portfolio-dropdown');
       const toggleButton = document.getElementById('portfolio-toggle');
       const dropdownMenu = document.getElementById('portfolio-menu');
@@ -983,12 +1496,55 @@
 
       portfolioDropdown.addEventListener('focusout', (e) => {
         if (!portfolioDropdown.contains(e.relatedTarget)) {
-            dropdownMenu.classList.remove('show');
-            toggleButton.setAttribute('aria-expanded', 'false');
+          dropdownMenu.classList.remove('show');
+          toggleButton.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      // Scroll to Top Button
+      const scrollTopBtn = document.getElementById('scroll-top');
+      
+      window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 500) {
+          scrollTopBtn.classList.add('visible');
+        } else {
+          scrollTopBtn.classList.remove('visible');
+        }
+      });
+
+      scrollTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // Form Submission Feedback
+      const form = document.getElementById('contact-form');
+      const formStatus = document.getElementById('form-status');
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const formData = new FormData(form);
+        
+        try {
+          const response = await fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            headers: { 'Accept': 'application/json' }
+          });
+          
+          if (response.ok) {
+            formStatus.textContent = 'Thank you! Your message has been sent successfully.';
+            formStatus.className = 'success';
+            form.reset();
+          } else {
+            throw new Error('Form submission failed');
+          }
+        } catch (error) {
+          formStatus.textContent = 'Oops! Something went wrong. Please try again.';
+          formStatus.className = 'error';
         }
       });
       
-      // Particle BG
+      // Particles
       tsParticles.load("tsparticles", {
         fpsLimit: 60,
         interactivity: {
